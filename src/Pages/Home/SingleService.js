@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SingleService = ({ service }) => {
+    const navigate = useNavigate()
     const { picture, name, price, description, id } = service;
+
+    const handleServiceDetails = () => {
+        navigate(`/service/${id}`)
+    }
     return (
         <div className='gap-45 border rounded lg:h-[400px] md:h-[400px] sm:h-[400px] shadow relative hover:transition-opacity'>
             <img className='w-100 rounded' src={picture} alt="" />
@@ -10,7 +16,7 @@ const SingleService = ({ service }) => {
                 <h4>Price: <span className='text-red-600'>{price}</span></h4>
                 <p>{description}</p>
             </div>
-            <button className='bg-red-600 text-white p-2 rounded w-full absolute bottom-0 hover:bg-red-800'>Book: {name}</button>
+            <button onClick={handleServiceDetails} className='bg-red-600 text-white p-2 rounded w-full absolute bottom-0 hover:bg-red-800'>Book: {name}</button>
         </div>
     );
 };

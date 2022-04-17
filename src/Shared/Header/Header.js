@@ -1,10 +1,19 @@
-import React from 'react';
+import { getAuth, signOut } from 'firebase/auth';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import auth from '../../Hooks/Firebase.init';
 import logo from '../../images/logo.png'
+import { useAuthState } from 'react-firebase-hooks/auth';
 const Header = () => {
+    const [open, setOpen] = useState(false)
+    const [user] = useAuthState(auth)
+
+    const handleSignOut = () => {
+        signOut(auth)
+    }
     return (
         <div>
-            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+            <nav className="bg-white border-gray-200 px-2 sm:px-4 rounded dark:bg-gray-800">
                 <div className="container flex flex-wrap justify-between items-center mx-auto">
                     <Link to="/" className="flex items-center">
                         <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
@@ -18,20 +27,29 @@ const Header = () => {
                         <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
 
                             <li>
-                                <Link to="/home" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</Link>
+                                <Link to="/home" className="block text-lg pr-4 pl-3  no-underline text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</Link>
                             </li>
                             <li>
-                                <Link to="/about" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
+                                <Link to="/about" className="block text-lg pr-4 pl-3  no-underline text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
                             </li>
                             <li>
-                                <Link to="/services" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</Link>
+                                <Link to="/services" className="block text-lg pr-4 pl-3  no-underline text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</Link>
                             </li>
                             <li>
-                                <Link to="/" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</Link>
+                                <Link to="/" className="block text-lg pr-4 pl-3  no-underline text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</Link>
                             </li>
                             <li>
-                                <Link to="/" className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</Link>
+                                {
+                                    user
+                                        ?
+                                        <Link onClick={handleSignOut} to="" className="block bg-red-600 mt-[-6px] py-2 px-4 rounded-pill text-lg pr-4 pl-3 no-underline text-white hover:bg-gray-700 border-1 text-black hover:text-black">Sing Out</Link>
+
+                                        :
+                                        <Link to="/login" className="block bg-red-600 mt-[-6px] py-2 px-4 rounded-pill text-lg pr-4 pl-3 no-underline text-white hover:bg-gray-700 border-1 text-black hover:text-black">Sing in</Link>
+
+                                }
                             </li>
+
                         </ul>
                     </div>
                 </div>

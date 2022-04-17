@@ -1,0 +1,20 @@
+.form-container {
+    width: 50%;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 50px;
+    border-radius: 10px;
+
+}
+
+.form-container input:not([type=checkbox]) {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+}
+
+input[type=checkbox] {
+    margin-right: 5px;
+}
