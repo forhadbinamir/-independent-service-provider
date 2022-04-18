@@ -2,7 +2,7 @@
 Website Live Link [Good Life](https://independent-service-prov-9c01e.web.app).
 
 ## Available Scripts
-
+** Bloating**
 In the project directory, you can run:
 
 ### `npm start`
