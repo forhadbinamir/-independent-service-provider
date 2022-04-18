@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../Hooks/Firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 const Register = () => {
     const [check, setCheck] = useState(false)
     const [
@@ -33,6 +34,9 @@ const Register = () => {
     }
     if (user) {
         navigate('/login')
+    }
+    if (loading) {
+        return <Loading></Loading>
     }
     let errorText;
     if (error) {

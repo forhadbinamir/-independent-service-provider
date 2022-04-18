@@ -11,27 +11,38 @@ import About from './Pages/Home/About/About';
 import Checkout from './Pages/CheckOut/Checkout';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Hooks/RequireAuth/RequireAuth';
+import { createContext, useEffect, useState } from 'react';
+import useProducts from './Hooks/useProducts';
 
+export const ContextApiData = createContext()
 function App() {
+  const [products, setProducts] = useState([])
+  useEffect(() => {
+    fetch("Data.json")
+      .then(res => res.json())
+      .then(data => setProducts(data))
+  }, [products])
   return (
-    <div>
-      <Header></Header>
-      <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
-        <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/service/:serviceDetails' element={
-          <RequireAuth>
-            <Checkout></Checkout>
-          </RequireAuth>
-        }></Route>
-        <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='*' element={<NotFound></NotFound>}></Route>
-      </Routes>
-      <Footer></Footer>
-    </div>
+    <ContextApiData.Provider value={[products]}>
+      <div>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/home' element={<Home></Home>}></Route>
+          <Route path='/about' element={<About></About>}></Route>
+          <Route path='/services' element={<Services></Services>}></Route>
+          <Route path='/service/:serviceDetails' element={
+            <RequireAuth>
+              <Checkout></Checkout>
+            </RequireAuth>
+          }></Route>
+          <Route path='/login' element={<Login></Login>}></Route>
+          <Route path='/register' element={<Register></Register>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
+        </Routes>
+        <Footer></Footer>
+      </div>
+    </ContextApiData.Provider>
   );
 }
 

@@ -1,9 +1,12 @@
+import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../Hooks/Firebase.init';
-
+import Loading from '../../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const [check, setCheck] = useState(false)
     // get value from input by using useRef;
@@ -17,6 +20,8 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    // resetpassword here 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     // handle login form 
     const handleLoginForm = event => {
         event.preventDefault()
@@ -25,8 +30,20 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
 
     }
+    const handleResetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email)
+            toast('sent email')
+        } else {
+            toast('Enter your email please')
+        }
+    }
     if (user) {
         navigate('/home')
+    }
+    if (loading) {
+        return <Loading></Loading>
     }
     let errorText;
     if (error) {
@@ -59,11 +76,16 @@ const Login = () => {
 
                     {errorText}
 
+                    <p className='text-center mt-2'>
+                        Forget Password<span onClick={handleResetPassword} className='text-orange-400 font-bold cursor-pointer'> Reset Password</span>
+                    </p>
+
                     <Button disabled={!check} variant="danger mt-3 px-4" type="submit">
                         Submit
                     </Button>
                     <p className='text-center'>New to here <Link className='text-red-600 font-bold no-underline' to='/register'>Plase Register</Link></p>
                 </Form>
+                <ToastContainer />
             </div>
         </div>
     );
