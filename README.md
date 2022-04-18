@@ -2,7 +2,11 @@
 Website Live Link [Good Life](https://independent-service-prov-9c01e.web.app).
 
 ## Available Scripts
-** Bloating**
+**Bloating**
+*1* used React Router v6;
+*2* used Firebase Firebsehook;
+*3* used css famework tailwind react boostrap and react toast for popup
+*4* used sign in sign out form with email password and login with google 
 In the project directory, you can run:
 
 ### `npm start`
