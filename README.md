@@ -1,5 +1,5 @@
 # Getting Started with Create Good Life Website App
-Website Live Link [Good Life] (https://independent-service-prov-9c01e.web.app).
+Website Live Link [Good Life](https://independent-service-prov-9c01e.web.app).
 
 ## Available Scripts
 
