@@ -13,6 +13,8 @@ import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Hooks/RequireAuth/RequireAuth';
 import { createContext, useEffect, useState } from 'react';
 import useProducts from './Hooks/useProducts';
+import Blogs from './Pages/Blogs/Blogs';
+import AboutMe from './Pages/AboutMe/AboutMe';
 
 export const ContextApiData = createContext()
 function App() {
@@ -29,11 +31,21 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/home' element={<Home></Home>}></Route>
+          <Route path='/aboutme' element={
+            <RequireAuth>
+              <AboutMe></AboutMe>
+            </RequireAuth>
+          }></Route>
           <Route path='/about' element={<About></About>}></Route>
           <Route path='/services' element={<Services></Services>}></Route>
           <Route path='/service/:serviceDetails' element={
             <RequireAuth>
               <Checkout></Checkout>
+            </RequireAuth>
+          }></Route>
+          <Route path='/blogs' element={
+            <RequireAuth>
+              <Blogs></Blogs>
             </RequireAuth>
           }></Route>
           <Route path='/login' element={<Login></Login>}></Route>

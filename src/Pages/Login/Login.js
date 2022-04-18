@@ -2,13 +2,16 @@ import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Hooks/Firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const [check, setCheck] = useState(false)
+    // send user same location with this path name 
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     // get value from input by using useRef;
     const emailRef = useRef('')
     const passwordRef = useRef('')
@@ -39,8 +42,9 @@ const Login = () => {
             toast('Enter your email please')
         }
     }
+    // path name replace here
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true })
     }
     if (loading) {
         return <Loading></Loading>
