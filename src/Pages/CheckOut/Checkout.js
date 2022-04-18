@@ -14,9 +14,10 @@ const Checkout = () => {
         <div>
             <div className='flex justify-center items-center py-8 mt-10'>
                 <img className='w-2/6 h-2/6 rounded mr-5' src={details.picture} alt="" />
-                <div className='shadow p-3'>
+                <div className='shadow p-3 w-50'>
                     <p className='w-96 h-[400]  text-1xl font-bold ' >Proceed to Order: <span className='text-red-600'>{details.name}</span> </p>
                     <p className='text-red-600 font-bold pr-2'>Price{details.price}</p>
+                    <p>{details.description}</p>
                     <button className='bg-yellow-300 p-2 rounded hover:text-white hover:bg-red-600'>Order Here</button>
                 </div>
 
