@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-Website Live Link [Good Life] (https://independent-service-prov-9c01e.web.app/)
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started with Create Good Life Website App
+Website Live Link [Good Life] (https://independent-service-prov-9c01e.web.app).
 
 ## Available Scripts
 
