@@ -1,9 +1,12 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started with Create Good Life Website App
+Website Live Link [Good Life](https://independent-service-prov-9c01e.web.app).
 
 ## Available Scripts
-
+**Bloating**
+*1* used React Router v6;
+*2* used Firebase Firebsehook;
+*3* used css famework tailwind react boostrap and react toast for popup
+*4* used sign in sign out form with email password and login with google 
 In the project directory, you can run:
 
 ### `npm start`
