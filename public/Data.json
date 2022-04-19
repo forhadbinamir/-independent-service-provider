@@ -3,7 +3,7 @@
         "id": "6259b0776509d474cb7536e9",
         "name": "Exercise controls weight",
         "price": "$7.56",
-        "picture": "https://ibb.co/yYNtmyZ",
+        "picture": "https://i.ibb.co/Tbw6D87/anastase-maragos-7k-Ep-UPB8v-Nk-unsplash-2.jpg",
         "category": "breakfast",
         "description": "Hey, new runner. If you’re reading this then I’m sure that you’re slowly starting to fall in love with running. If you stick with it, you won’t regret it, I promise. This post is here to help you to get the most out of your new hobby by helping you understand what you should eat"
     },
@@ -11,7 +11,7 @@
         "id": "6259b07764d259782f56b00c",
         "name": "Exercise combats health",
         "price": "$17.37",
-        "picture": "https://ibb.co/nnJBSJK",
+        "picture": "https://i.ibb.co/61C85Cq/photo-1517836357463-d25dfeac3438.jpg",
         "category": "breakfast",
         "description": "Hey, new runner. If you’re reading this then I’m sure that you’re slowly starting to fall in love with running. If you stick with it, you won’t regret it, I promise. This post is here to help you to get the most out of your new hobby by helping you understand what you should eat"
     },
@@ -19,7 +19,7 @@
         "id": "6259b077f3d673d890bafb78",
         "name": "Exercise improves mood",
         "price": "$24.73",
-        "picture": "https://ibb.co/55jtFRJ",
+        "picture": "https://i.ibb.co/Xz5N8CG/valery-sysoev-LDAir-ERNzew-unsplash.jpg",
         "category": "breakfast",
         "description": "Hey, new runner. If you’re reading this then I’m sure that you’re slowly starting to fall in love with running. If you stick with it, you won’t regret it, I promise. This post is here to help you to get the most out of your new hobby by helping you understand what you should eat"
     },
@@ -27,7 +27,7 @@
         "id": "6259b0775cde37e1bfe8918a",
         "name": "Exercise boosts energy ",
         "price": "$28.55",
-        "picture": "https://ibb.co/drJDx8M",
+        "picture": "https://i.ibb.co/2yYdHGh/victor-freitas-HG6a-Af79-Q5-E-unsplash.jpg",
         "category": "breakfast",
         "description": "Hey, new runner. If you’re reading this then I’m sure that you’re slowly starting to fall in love with running. If you stick with it, you won’t regret it, I promise. This post is here to help you to get the most out of your new hobby by helping you understand what you should eat"
     },
@@ -46,101 +46,5 @@
         "picture": "https://images.unsplash.com/photo-1554344728-77cf90d9ed26?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=valery-sysoev-LDAirERNzew-unsplash.jpg",
         "category": "breakfast",
         "description": "Hey, new runner. If you’re reading this then I’m sure that you’re slowly starting to fall in love with running. If you stick with it, you won’t regret it, I promise. This post is here to help you to get the most out of your new hobby by helping you understand what you should eat"
-    },
-    {
-        "id": "6259b32bd289ca2ed79ebc3a",
-        "name": "salmon with grapefruit and lentil salad",
-        "price": "$22.54",
-        "picture": "https://i.ibb.co/YPf5fng/dinner1.png",
-        "category": "dinner",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b32b75e79f2eaaebca61",
-        "name": "lemony salmon piccata",
-        "price": "$18.60",
-        "picture": "https://i.ibb.co/VBBVY9Y/dinner2.png",
-        "category": "dinner",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b32b640b4d9c55c67ba2",
-        "name": "pork tenderloin with quinoa pilaf",
-        "price": "$32.15",
-        "picture": "https://i.ibb.co/1Xj2bSd/dinner3.png",
-        "category": "dinner",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b32bf92878c1b21521b5",
-        "name": "french fries with cheese",
-        "price": "$19.59",
-        "picture": "https://i.ibb.co/R4gHQVL/dinner4.png",
-        "category": "dinner",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b32b6bda070e6db88958",
-        "name": "garlic butter baked salmon",
-        "price": "$30.37",
-        "picture": "https://i.ibb.co/JcvRyKd/dinner5.png",
-        "category": "dinner",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b32be436c111bf0ee423",
-        "name": "baked chiken",
-        "price": "$15.95",
-        "picture": "https://i.ibb.co/P4qd7Sx/dinner6.png",
-        "category": "dinner",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b3df87dac81c552e1224",
-        "name": "healthy meal plan",
-        "price": "$19.23",
-        "picture": "https://i.ibb.co/QFK2gDq/lunch1.png",
-        "category": "lunch",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b3df1a83fcafaa953de3",
-        "name": "fried chiken bento",
-        "price": "$22.25",
-        "picture": "https://i.ibb.co/MDHgJr2/lunch2.png",
-        "category": "lunch",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b3df9a024663ea23b261",
-        "name": "tarragon rubbed salmon",
-        "price": "$24.81",
-        "picture": "https://i.ibb.co/kBHZ24N/lunch3.png",
-        "category": "lunch",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b3dfd6473533a63f07a7",
-        "name": "indian lunch",
-        "price": "$31.62",
-        "picture": "https://i.ibb.co/d4tsthL/lunch4.png",
-        "category": "lunch",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b3df9da8f67d073464d2",
-        "name": "beef steak",
-        "price": "$25.95",
-        "picture": "https://i.ibb.co/b3G416N/lunch5.png",
-        "category": "lunch",
-        "description": "How we dream about our future"
-    },
-    {
-        "id": "6259b3df12626ed52fbe9f24",
-        "name": "honey soy glazed salmon with peppers",
-        "price": "$15.49",
-        "picture": "https://i.ibb.co/8Pwk9X3/lunch6.png",
-        "category": "lunch",
-        "description": "How we dream about our future"
     }
 ]

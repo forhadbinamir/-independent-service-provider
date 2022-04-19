@@ -12,7 +12,6 @@ import Checkout from './Pages/CheckOut/Checkout';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Hooks/RequireAuth/RequireAuth';
 import { createContext, useEffect, useState } from 'react';
-import useProducts from './Hooks/useProducts';
 import Blogs from './Pages/Blogs/Blogs';
 import AboutMe from './Pages/AboutMe/AboutMe';
 
@@ -23,7 +22,7 @@ function App() {
     fetch("Data.json")
       .then(res => res.json())
       .then(data => setProducts(data))
-  }, [products])
+  }, [])
   return (
     <ContextApiData.Provider value={[products]}>
       <div>

@@ -4,9 +4,9 @@ import aboutimg2 from '../../../images/about/about2.jpg'
 const About = () => {
     return (
         <div className='mb-40 mt-20'>
-            <h2 className='text-center text-4xl font-bold border-bottom w-[15%] pb-2 mx-auto'>My <span className='text-red-600'>Gym</span></h2>
+            <h2 className='text-center text-4xl font-bold pb-2 mx-auto'>My <span className='text-red-600'>Gym</span></h2>
             <div className='lg:flex justify-center items-center container md:flex-row sm:flex-row '>
-                <div className="image-area relative p-20 w-[100%]">
+                <div className="image-area relative p-20 w-[100%] sm:mb-40 lg:mb-20 md:mb-20 ">
                     <div className=''>
                         <img className='w-[250px] rounded' src={aboutimg1} alt="" />
                     </div>
@@ -15,7 +15,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="w-[100%]">
-                    <div className='p-2'>
+                    <div className='p-2 lg:mt-3 md:mt-6 sm:mt-20'>
                         <h2 className='border-bottom pb-2 font-bold'>My Gym Benefits</h2>
                         <p>Want to feel better, have more energy and even add years to your life? Just exercise.
                             <br />

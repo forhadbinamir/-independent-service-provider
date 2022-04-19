@@ -9,7 +9,7 @@ const SingleService = ({ service }) => {
         navigate(`/service/${id}`)
     }
     return (
-        <div className='gap-45 border rounded lg:h-[400px] md:h-[400px] sm:h-[400px] shadow relative hover:transition-opacity'>
+        <div className='gap-45 border rounded lg:h-[480px] md:h-[450px] sm:h-[400px] shadow relative hover:transition-opacity'>
             <img className='w-100 rounded' src={picture} alt="" />
             <div className="px-2">
                 <h3>{name}</h3>
