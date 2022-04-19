@@ -18,6 +18,7 @@ import AboutMe from './Pages/AboutMe/AboutMe';
 export const ContextApiData = createContext()
 function App() {
   const [products, setProducts] = useState([])
+
   useEffect(() => {
     fetch("Data.json")
       .then(res => res.json())
